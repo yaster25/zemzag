@@ -36,6 +36,8 @@
 								<link href="https://zemzag.ru/custom/my/css/copy.css" rel="stylesheet" type="text/css">
 									<link href="https://zemzag.ru/custom/my/css/ion.rangeSlider.min.css" rel="stylesheet" type="text/css">
     
+    <link href="custom/my/css/style-new.css" rel="stylesheet" type="text/css">
+    
 	<meta name="format-detection" content="telephone=no">
 
 
@@ -104,22 +106,41 @@
 
 			</div>
 		</div>
-    <div class="icon_ready d-inline-block d-sm-none"><a href="#"><img class="icon-ready" src="https://zemzag.ru/custom/my/img/icon-ready.png" alt="ready" ></a>
-<div class="icon_arrow d-block d-sm-none"><img src="https://zemzag.ru/custom/my/img/icon-arrow.png" alt="arrow" >
-
-
-</div>
-
-</div><div id="mob_menu_opener"><img src="https://zemzag.ru/custom/my/img/icon-menu-mob.png"></div><div class="hat_menu">
+        <div class="header-choose">
+            <a href="#" class="header-choose__link icon-ready">
+                <span>Участки на карте</span>
+                <img src="custom/my/img/icon-y-address.png" alt="">
+            </a>
+        </div>    	
+        <div id="mob_menu_opener">
+            <span>меню</span>
+            <img src="https://zemzag.ru/custom/my/img/icon-menu-mob.png">
+        </div>
+        
+        <div class="hat_menu">
 <div class="hat_menu_container mobil__flex">
 <div id="mob_menu_opener" class="menu_closer">
 <img src="https://zemzag.ru/custom/my/img/menu-close-icon.png">
 </div>
 <div class="mob_menu_title">Меню</div>
-<ul><li><a href="https://zemzag.ru/poselki/" class="hat_menu_link active">Каталог участков</a></li><li><a href="/poselki/?module=ab&action=search&cat_id=0&p20%5B%5D=0&p21%5B%5D=0&p7_1=10&p7_2=150&p1_1=1000&p1_2=400000&view_type=map" class="hat_menu_link">Участки на карте</a></li><li><a href="https://zemzag.ru/prodat-uchastok/" class="hat_menu_link">Продать участок</a></li></ul>
+<ul>
+    <li class="hide-d">
+        <a href="#" class="hat_menu_link">Поиск по параметрам</a>
+    </li>
+    <li>
+        <a href="https://zemzag.ru/poselki/" class="hat_menu_link">Каталог участков</a>
+    </li>
+    <li>
+        <a href="/poselki/?module=ab&action=search&cat_id=0&p20%5B%5D=0&p21%5B%5D=0&p7_1=10&p7_2=150&p1_1=1000&p1_2=400000&view_type=map" class="hat_menu_link">Участки на карте</a>
+    </li>
+    <li class="hide-m">
+        <a href="https://zemzag.ru/prodat-uchastok/" class="hat_menu_link">Продать участок</a>
+    </li>
+</ul>
 
 <ul id="accordion" style="padding: 0px;">
   <li><a class="mobile__menu-link" href="/upravlenie-aktivami">Сотрудничество</a></li>
+  <li><a class="mobile__menu-link" href="https://zemzag.ru/prodat-uchastok/">Продать участок</a></li>
   <li><a class="mobile__menu-link" href="/clauses">Новости</a></li>
   <li><a class="mobile__menu-link" href="/o-kompanii">О компании</a></li>   
   <li><a class="mobile__menu-link" href="/vakansii179">Вакансии</a></li> 
@@ -502,7 +523,8 @@
 
 	<div class="align">
 		<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="https://zemzag.ru/" rel="v:url" property="v:title">Главная</a>  </span><span typeof="v:Breadcrumb"><a href="https://zemzag.ru/poselki/" rel="v:url" property="v:title">Продажа участков в поселках Подмосковья</a>  </span> <span typeof="v:Breadcrumb">Поиск по объявлениям</span></div>
-		<h1 class="type_header">Поиск по объявлениям</h1><div class="type_filters_block ab_search"><form method="GET" action="https://zemzag.ru/poselki/" class="type_filters_form ab_search"><div class="filter_form_desk"><input type="hidden" name="module" value="ab">
+		<h1 class="type_header">Участки на карте</h1>
+        <div class="type_filters_block ab_search"><form method="GET" action="https://zemzag.ru/poselki/" class="type_filters_form ab_search"><div class="filter_form_desk"><input type="hidden" name="module" value="ab">
 <input type="hidden" name="action" value="search"><div class="ab_search_site_ids">
 	<span class="input-title">Раздел:</span>
 	<select class="cs-select"><option value="158" path="https://zemzag.ru/poselki/" selected>Продажа участков в поселках Подмосковья</option><option value="159" path="https://zemzag.ru/zemli/">Продажа земли сельхозназначения</option><option value="160" path="https://zemzag.ru/promyshlennye-zemli/">Продажа земли промназначения</option><option value="181" path="https://zemzag.ru/archive/">Архив</option></select></div><div style="display: none">miyukiArray
@@ -1263,45 +1285,203 @@
 		<div class="type_container">
 
 			<div class="type_main">
-				<div class="catalog__map">
-	        <div id="geomap_map" class="geo" style="height="575px" width:100%; "></div>
-	        <div class="catalog__map-info">
-	        <h3 class="catalog__map-title"></h3>
-	        <span class="catalog__map-del catalog__map-del-js"></span>
-	        <div class="catalog__map-img">
-	          <img class="catalog__map-image" src="" alt="">
-	          <div class="catalog__map-labels">
-	          	<span class="catalog__marc catalog__installment">рассрочка 0%</span>
-	          	<span class="catalog__marc catalog__new">новинка</span>
-	          </div>
+        
+                <div class="catalog__map">
+                    <div id="geomap_map-2" class="geo" style="height:575px; width:100%; "></div>
+                    <div class="catalog__map-info">
+                    <h3 class="catalog__map-title"></h3>
+                    <span class="catalog__map-del catalog__map-del-js"></span>
+                    <div class="catalog__map-img">
+                      <img class="catalog__map-image" src="" alt="">
+                      <div class="catalog__map-labels">
+                        <span class="catalog__marc catalog__installment">рассрочка 0%</span>
+                        <span class="catalog__marc catalog__new">новинка</span>
+                      </div>
 
-	        </div>
-	        <div class="catalog__map-description"> 
-	          <div class="catalog__map-header">
-	          </div>
-	          <div class="catalog__map-body">
-	            <div class="catalog__map-body-item">
-	              <img class="catalog__map-body-item-img" src="https://zemzag.ru/custom/my/img/object_distance.png" alt="">
-	              <div class="catalog__map-body-item-distance">60 км от МКАД</div>
-	            </div>
-	            <div class="catalog__map-body-item">
-	              <img class="catalog__map-body-item-img" src="https://zemzag.ru/custom/my/img/direction.png" alt="">
-	              Юго/запад
-	            </div>
-	          </div>
-	          <div class="catalog__map-footer">
-	            <div class="catalog__map-price">
-	              от
-	              <span class="catalog__map-price-big">
-	                35 000
-	              </span>
-	              руб/сот.
-	            </div>
-	            <a class="catalog__map-price-link" href="">подробнее</a>
-	          </div>
-	        </div>
-	        </div>
-	</div><script type="text/javascript">
+                    </div>
+                    <div class="catalog__map-description"> 
+                      <div class="catalog__map-header">
+                      </div>
+                      <div class="catalog__map-body">
+                        <div class="catalog__map-body-item">
+                          <img class="catalog__map-body-item-img" src="https://zemzag.ru/custom/my/img/object_distance.png" alt="">
+                          <div class="catalog__map-body-item-distance">60 км от МКАД</div>
+                        </div>
+                        <div class="catalog__map-body-item">
+                          <img class="catalog__map-body-item-img" src="https://zemzag.ru/custom/my/img/direction.png" alt="">
+                          Юго/запад
+                        </div>
+                      </div>
+                      <div class="catalog__map-footer">
+                        <div class="catalog__map-price">
+                          от
+                          <span class="catalog__map-price-big">
+                            35 000
+                          </span>
+                          руб/сот.
+                        </div>
+                        <a class="catalog__map-price-link" href="">подробнее</a>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="catalog__map__info-markers">
+                    <div class="catalog__map__info-marker">
+                        <img src="custom/my/img/icon-marker-blue.png" alt="">
+                        Поселки
+                    </div>
+                    <div class="catalog__map__info-marker">
+                        <img src="custom/my/img/icon-marker-orange.png" alt="">
+                        Пром
+                    </div>
+                    <div class="catalog__map__info-marker">
+                        <img src="custom/my/img/icon-marker-green.png" alt="">
+                        С / Х
+                    </div>
+                </div>
+                
+                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=08580a8f-4d19-45ca-817f-821851d0dbf0" type="text/javascript"></script>
+                
+                <script type="text/javascript">
+                ymaps.ready(function () {
+                    var myMap = new ymaps.Map('geomap_map-2', {
+                        center: [55.384931, 37.72624],
+                        zoom: 9,
+                         controls: ['zoomControl']
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    });
+                    
+                    
+                    
+                    var contentString;
+                        
+                    /* Placemark-1 */
+                    
+                    contentString = "<p class=\"map_item_name\"><a href=\"https://zemzag.ru/poselki/kottedzhnye-poselki-simferopolskoe-shosse/ivanovskoe-izhs/\" target=\"_blank\">Ивановское ИЖС</a></p><img src=\"https://zemzag.ru/userfls/ab/midob/1052_chekhovskiy-bor.jpg\" alt=\"Ивановское ИЖС\" title=\"Ивановское ИЖС\" class=\"map_item_img\"><div class=\"map_item_anons\"></div><p class=\"map_item_btn\"><a href=\"https://zemzag.ru/poselki/kottedzhnye-poselki-simferopolskoe-shosse/ivanovskoe-izhs/\" target=\"_blank\">Просмотреть участок</a></p>";
+                    
+                    var myPlacemark = new ymaps.Placemark([55.16106726143174, 37.37508152484608], {
+                        hintContent: 'Ивановское ИЖС',
+                        //balloonContentBody: contentString,
+                            }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'custom/my/img/icon-marker-blue.png',
+                                iconImageSize: [23, 20],
+                                iconImageOffset: [-5, -18]
+                            });
+                    
+                    
+                    
+                     myMap.geoObjects.add(myPlacemark);
+                    
+                    myPlacemark.events.add('click', function (e) {
+                        myLatlng = [55.16106726143174, 37.37508152484608];
+                          myMap.panTo([55.16106726143174, 37.37508152484608]);
+                         $(`.catalog__map-info`).addClass(`active`);
+                         $(`.catalog__map-title`).html("Ивановское ИЖС");
+                         $(`.catalog__map-image`).attr("src", "https://zemzag.ru/userfls/ab/midob/1052_chekhovskiy-bor.jpg");
+                         $(`.catalog__map-price-big`).html(`60 000`)
+                         $(`.catalog__map-price-link[href]`).attr("href", "https://zemzag.ru/poselki/kottedzhnye-poselki-simferopolskoe-shosse/ivanovskoe-izhs/");
+                         $(`.catalog__map-body-item-distance`).html("50 км от МКАД");
+                         $(`.catalog__map-header`).html(`<div class="catalog__map-description-item" data-foo=Детский сад><img   src="https://zemzag.ru/custom/my/img/object_icons_green/28.png"></div><div class="catalog__map-description-item" data-foo=Школа><img   src="https://zemzag.ru/custom/my/img/object_icons_green/29.png"></div><div class="catalog__map-description-item" data-foo=Остановка><img   src="https://zemzag.ru/custom/my/img/object_icons_green/30.png"></div><div class="catalog__map-description-item" data-foo=Лес><img   src="https://zemzag.ru/custom/my/img/object_icons_green/32.png"></div><div class="catalog__map-description-item" data-foo=Магазин><img   src="https://zemzag.ru/custom/my/img/object_icons_green/33.png"></div><div class="catalog__map-description-item" data-foo=Церковь><img   src="https://zemzag.ru/custom/my/img/object_icons_green/34.png"></div><div class="catalog__map-description-item" data-foo=Электричество><img   src="https://zemzag.ru/custom/my/img/object_icons_green/35.png"></div>`);
+                         $(`.catalog__map-labels`).html(`
+                        <div class="type_objects_one_tabels">
+                        <div class="type_objects_one_flag3"></div></div>`);
+			
+                    });
+                    
+                    /*END Placemark-1*/
+                    
+                    
+                    /* Placemark-2 */
+                 
+                    contentString = "<p class=\"map_item_name\"><a href=\"https://zemzag.ru/poselki/kottedzhnye-poselki-novorizhskoe-shosse/poselok-rizhskaya-dubrava/\" target=\"_blank\">Поселок «Рижская Дубрава»</a></p><img src=\"https://zemzag.ru/userfls/ab/midob/1037_poselok-rizhskaya-dubrava.jpg\" alt=\"Поселок «Рижская Дубрава»\" title=\"Поселок «Рижская Дубрава»\" class=\"map_item_img\"><div class=\"map_item_anons\"></div><p class=\"map_item_btn\"><a href=\"https://zemzag.ru/poselki/kottedzhnye-poselki-novorizhskoe-shosse/poselok-rizhskaya-dubrava/\" target=\"_blank\">Просмотреть участок</a></p>";
+                    
+                    var myPlacemark2 = new ymaps.Placemark([55.961075117035705, 36.54640597222674], {
+                        hintContent: 'Поселок «Рижская Дубрава',
+                        //balloonContentBody: contentString,
+                            }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'custom/my/img/icon-marker-orange.png',
+                                iconImageSize: [23, 20],
+                                iconImageOffset: [-5, -18]
+                            });
+                    
+                    
+                    
+                     myMap.geoObjects.add(myPlacemark2);
+                    
+                    myPlacemark2.events.add('click', function (e) {
+                        myLatlng = [55.961075117035705, 36.54640597222674];
+                          myMap.panTo([55.961075117035705, 36.54640597222674]);
+                         $(`.catalog__map-info`).addClass(`active`);
+                         $(`.catalog__map-title`).html("Поселок «Рижская Дубрава»");
+                         $(`.catalog__map-image`).attr("src", "https://zemzag.ru//userfls/ab/midob/1037_poselok-rizhskaya-dubrava.jpg");
+                         $(`.catalog__map-price-big`).html(`40 000`)
+                         $(`.catalog__map-price-link[href]`).attr("href", "https://zemzag.ru/poselki/kottedzhnye-poselki-novorizhskoe-shosse/poselok-rizhskaya-dubrava/");
+                         $(`.catalog__map-body-item-distance`).html("55 км от МКАД");
+                         $(`.catalog__map-header`).html(`<div class="catalog__map-description-item" data-foo=Школа><img   src="https://zemzag.ru/custom/my/img/object_icons_green/29.png"></div><div class="catalog__map-description-item" data-foo=Остановка><img   src="https://zemzag.ru/custom/my/img/object_icons_green/30.png"></div><div class="catalog__map-description-item" data-foo=Лес><img   src="https://zemzag.ru/custom/my/img/object_icons_green/32.png"></div><div class="catalog__map-description-item" data-foo=Магазин><img   src="https://zemzag.ru/custom/my/img/object_icons_green/33.png"></div><div class="catalog__map-description-item" data-foo=Электричество><img   src="https://zemzag.ru/custom/my/img/object_icons_green/35.png"></div>`);
+                         $(`.catalog__map-labels`).html(`<div class="type_objects_one_flag1"></div>
+                <div class="type_objects_one_tabels">
+                <div class="type_objects_one_flag3"></div></div>`);
+			
+                    });
+                    
+                    /*END Placemark-2*/
+                    
+                    
+                    /* Placemark-3 */
+                    
+                  
+			         contentString = "<p class=\"map_item_name\"><a href=\"https://zemzag.ru/poselki/kottedzhnye-poselki-novoryazanskoe-shosse/poselok-novoe-grigorovo/\" target=\"_blank\">Поселок «Новое Григорово»</a></p><img src=\"https://zemzag.ru/userfls/ab/midob/973_poselok-novoe-grigorovo.jpg\" alt=\"Поселок «Новое Григорово»\" title=\"Поселок «Новое Григорово»\" class=\"map_item_img\"><div class=\"map_item_anons\"></div><p class=\"map_item_btn\"><a href=\"https://zemzag.ru/poselki/kottedzhnye-poselki-novoryazanskoe-shosse/poselok-novoe-grigorovo/\" target=\"_blank\">Просмотреть участок</a></p>";
+	    
+                    
+                    var myPlacemark3 = new ymaps.Placemark([55.642898120966194, 38.409048548903364], {
+                        hintContent: 'Поселок «Новое Григорово»',
+                        //balloonContentBody: contentString,
+                            }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'custom/my/img/icon-marker-green.png',
+                                iconImageSize: [23, 20],
+                                iconImageOffset: [-5, -18]
+                            });
+                    
+                    
+                    
+                     myMap.geoObjects.add(myPlacemark3);
+                    
+                    myPlacemark3.events.add('click', function (e) {
+                        myLatlng = [55.642898120966194, 38.409048548903364];
+                          myMap.panTo([55.642898120966194, 38.409048548903364]);
+                         $(`.catalog__map-info`).addClass(`active`);
+                         $(`.catalog__map-title`).html("Поселок «Новое Григорово»");
+                         $(`.catalog__map-image`).attr("src", "https://zemzag.ru//userfls/ab/midob/973_poselok-novoe-grigorovo.jpg");
+                         $(`.catalog__map-price-big`).html(`36 000`)
+                         $(`.catalog__map-price-link[href]`).attr("href", "https://zemzag.ru/poselki/kottedzhnye-poselki-novoryazanskoe-shosse/poselok-novoe-grigorovo/");
+                         $(`.catalog__map-body-item-distance`).html("43 км от МКАД");
+                         $(`.catalog__map-header`).html(`<div class="catalog__map-description-item" data-foo=Остановка><img   src="https://zemzag.ru/custom/my/img/object_icons_green/30.png"></div><div class="catalog__map-description-item" data-foo=Лес><img   src="https://zemzag.ru/custom/my/img/object_icons_green/32.png"></div><div class="catalog__map-description-item" data-foo=Магазин><img   src="https://zemzag.ru/custom/my/img/object_icons_green/33.png"></div><div class="catalog__map-description-item" data-foo=Электричество><img   src="https://zemzag.ru/custom/my/img/object_icons_green/35.png"></div><div class="catalog__map-description-item" data-foo=Водоем><img   src="https://zemzag.ru/custom/my/img/object_icons_green/37.png"></div>`);
+                         $(`.catalog__map-labels`).html(`<div class="type_objects_one_flag1"></div>
+                <div class="type_objects_one_tabels">
+                <div class="type_objects_one_flag3"></div></div>`);
+			
+                    });
+                    
+                    /*END Placemark-3*/
+                    
+                    
+                    myMap.setBounds(myMap.geoObjects.getBounds(), {
+                        checkZoomRange: true,
+                        zoomMargin: 35
+                    });
+
+                       
+                    });
+                </script>
+                
+                
+                
+                <!-- old script google maps <script type="text/javascript">
 
 	var all_markers = [];
 	var map = "";
@@ -1322,7 +1502,8 @@
 	  map.setCenter(myLatlng)
 
 		var image = 'https://zemzag.ru/custom/my/img/marker.png';
-		var contentString;image = 'https://zemzag.ru/custom/my/img/marker.png';
+		var contentString;
+        image = 'https://zemzag.ru/custom/my/img/marker.png';
 			
 			all_markers.push({pos: [55.16106726143174, 37.37508152484608], name: "marker1"});
 			myLatlng = new google.maps.LatLng(55.16106726143174, 37.37508152484608);
@@ -1352,7 +1533,12 @@
 	     $(`.catalog__map-labels`).html(`
 <div class="type_objects_one_tabels">
 <div class="type_objects_one_flag3"></div></div>`);
-			});image = 'https://zemzag.ru/custom/my/img/marker.png';
+			});
+        
+        
+        
+        
+        image = 'https://zemzag.ru/custom/my/img/marker.png';
 			
 			all_markers.push({pos: [55.961075117035705, 36.54640597222674], name: "marker2"});
 			myLatlng = new google.maps.LatLng(55.961075117035705, 36.54640597222674);
@@ -1743,7 +1929,10 @@
 <div class="type_objects_one_tabels">
 </div>`);
 			});}
-	</script>
+	</script> -->
+                
+                
+                
 <div class="ban_section align ab_view_map_banner_blocks"><div class="ban_wrap ban__wrap"><a href="https://zemzag.ru/rassrochka/" class="ban_one ban__item"><div class="ban_one_img"><img src="https://zemzag.ru/userfls/bs/bgi1_31.png" alt="" title=""></div>
 				<div class="ban_one_title">БЕСПРОЦЕНТНАЯ РАССРОЧКА <br><span>(0% ГОДОВЫХ)</span></div></a><a href="https://zemzag.ru/feedback/" class="ban_one ban__item"><div class="ban_one_img"><img src="https://zemzag.ru/userfls/bs/bgi4_34.png" alt="" title=""></div>
 				<div class="ban_one_title">ОФОРМИТЬ В КРЕДИТ<br> <span>ПАРТНЕР ЛОКОБАНК</span></div></a><a href="https://zemzag.ru/zvon/" class="ban_one ban__item"><div class="ban_one_img"><img src="https://zemzag.ru/userfls/bs/bgi3_33.png" alt="" title=""></div>
