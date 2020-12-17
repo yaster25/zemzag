@@ -36,6 +36,9 @@
 							<link href="https://zemzag.ru/custom/my/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 								<link href="https://zemzag.ru/custom/my/css/copy.css" rel="stylesheet" type="text/css">
 									<link href="https://zemzag.ru/custom/my/css/ion.rangeSlider.min.css" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" type="text/css" href="custom/my/css/style-new.css"/>
+    
 	<meta name="format-detection" content="telephone=no">
 
 
@@ -103,22 +106,40 @@
 
 			</div>
 		</div>
-    <div class="icon_ready d-inline-block d-sm-none"><a href="#"><img class="icon-ready" src="https://zemzag.ru/custom/my/img/icon-ready.png" alt="ready" ></a>
-<div class="icon_arrow d-block d-sm-none"><img src="https://zemzag.ru/custom/my/img/icon-arrow.png" alt="arrow" >
-
-
-</div>
-
-</div><div id="mob_menu_opener"><img src="https://zemzag.ru/custom/my/img/icon-menu-mob.png"></div><div class="hat_menu">
+        <div class="header-choose">
+            <a href="#" class="header-choose__link icon-ready">
+                <span>Участки на карте</span>
+                <img src="custom/my/img/icon-y-address.png" alt="">
+            </a>
+        </div>    	
+        <div id="mob_menu_opener">
+            <span>меню</span>
+            <img src="https://zemzag.ru/custom/my/img/icon-menu-mob.png">
+        </div>
+        <div class="hat_menu">
 <div class="hat_menu_container mobil__flex">
 <div id="mob_menu_opener" class="menu_closer">
 <img src="https://zemzag.ru/custom/my/img/menu-close-icon.png">
 </div>
 <div class="mob_menu_title">Меню</div>
-<ul><li><a href="https://zemzag.ru/poselki/" class="hat_menu_link active">Каталог участков</a></li><li><a href="/poselki/?module=ab&action=search&cat_id=0&p20%5B%5D=0&p21%5B%5D=0&p7_1=10&p7_2=150&p1_1=1000&p1_2=400000&view_type=map" class="hat_menu_link">Участки на карте</a></li><li><a href="https://zemzag.ru/prodat-uchastok/" class="hat_menu_link">Продать участок</a></li></ul>
+<ul>
+    <li class="hide-d">
+        <a href="#" class="hat_menu_link">Поиск по параметрам</a>
+    </li>
+    <li>
+        <a href="https://zemzag.ru/poselki/" class="hat_menu_link">Каталог участков</a>
+    </li>
+    <li>
+        <a href="/poselki/?module=ab&action=search&cat_id=0&p20%5B%5D=0&p21%5B%5D=0&p7_1=10&p7_2=150&p1_1=1000&p1_2=400000&view_type=map" class="hat_menu_link">Участки на карте</a>
+    </li>
+    <li class="hide-m">
+        <a href="https://zemzag.ru/prodat-uchastok/" class="hat_menu_link">Продать участок</a>
+    </li>
+</ul>
 
 <ul id="accordion" style="padding: 0px;">
   <li><a class="mobile__menu-link" href="/upravlenie-aktivami">Сотрудничество</a></li>
+  <li><a class="mobile__menu-link" href="https://zemzag.ru/prodat-uchastok/">Продать участок</a></li>
   <li><a class="mobile__menu-link" href="/clauses">Новости</a></li>
   <li><a class="mobile__menu-link" href="/o-kompanii">О компании</a></li>   
   <li><a class="mobile__menu-link" href="/vakansii179">Вакансии</a></li> 
@@ -499,7 +520,30 @@
 
 	<div class="align">
 		<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="https://zemzag.ru/" rel="v:url" property="v:title">Главная</a>  </span> <span typeof="v:Breadcrumb">Продажа участков в поселках Подмосковья</span></div>
-		<h1 class="type_header">Продажа участков в поселках Подмосковья</h1><div class="type_filters_block ab_search"><form method="GET" action="https://zemzag.ru/poselki/" class="type_filters_form ab_search"><div class="filter_form_desk"><input type="hidden" name="module" value="ab">
+		<h1 class="type_header">Каталог участков Подмосковья</h1>
+        
+        <div class="block-choose-y-type">
+            <div class="block-choose-y-type__col">
+                <a href="#" class="block-choose-y-type__item active">
+                    <img src="custom/my/img/icon-y-type-01-active.png" alt="">
+                    <span>пром</span>
+                </a>
+            </div>
+            <div class="block-choose-y-type__col">
+                <a href="#" class="block-choose-y-type__item">
+                    <img src="custom/my/img/icon-y-type-02.png" alt="">
+                    <span>поселки</span>
+                </a>
+            </div>
+            <div class="block-choose-y-type__col">
+                <a href="#" class="block-choose-y-type__item">
+                    <img src="custom/my/img/icon-y-type-03.png" alt="">
+                    <span>с / х</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="type_filters_block ab_search"><form method="GET" action="https://zemzag.ru/poselki/" class="type_filters_form ab_search"><div class="filter_form_desk"><input type="hidden" name="module" value="ab">
 <input type="hidden" name="action" value="search"><div class="ab_search_site_ids">
 	<span class="input-title">Раздел:</span>
 	<select class="cs-select"><option value="158" path="https://zemzag.ru/poselki/" selected>Продажа участков в поселках Подмосковья</option><option value="159" path="https://zemzag.ru/zemli/">Продажа земли сельхозназначения</option><option value="160" path="https://zemzag.ru/promyshlennye-zemli/">Продажа земли промназначения</option><option value="181" path="https://zemzag.ru/archive/">Архив</option></select></div><div style="display: none">miyukiArray
