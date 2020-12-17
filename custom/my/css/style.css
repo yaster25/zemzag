@@ -3006,7 +3006,7 @@ input.header_search_input:-internal-autofill-selected {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    background: url(/custom/my/img/banner-sale.png);
+    background: url(../img/banner-sale.png);
     background-repeat: no-repeat; 
     background-size: cover;
 }
